@@ -1,4 +1,4 @@
-const { makeAxiosRequestWithExpectedStatus } = require('../../utilities/common')
+const { makeAxiosRequestWithExpectedStatus } = require('../../utilities/common');
 
 describe('GIVEN valid data for a user', () => {
   const name = 'Alex';
@@ -13,7 +13,7 @@ describe('GIVEN valid data for a user', () => {
       data: {
         name,
         balance,
-      }
+      },
     };
     let createUserApiResponse;
     beforeAll(async () => {
@@ -33,6 +33,6 @@ describe('GIVEN valid data for a user', () => {
       url: `http://localhost:8080/api/users/${userId}`,
       method: 'DELETE',
     };
-    await makeAxiosRequestWithExpectedStatus(requestParams, expectedStatus)
+    await makeAxiosRequestWithExpectedStatus(requestParams, expectedStatus);
   });
 });

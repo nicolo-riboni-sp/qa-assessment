@@ -1,4 +1,3 @@
-
 describe('GIVEN valid data for a user', () => {
   const name = 'Alex';
   const balance = '1000';
@@ -12,13 +11,13 @@ describe('GIVEN valid data for a user', () => {
       // enter name
       await page.waitForSelector('#name', { visible: true });
       const fieldName = await page.$('#name');
-      await fieldName.click({ clickCount: 3 })
+      await fieldName.click({ clickCount: 3 });
       await fieldName.type(name);
 
       // enter balance
       await page.waitForSelector('#balance', { visible: true });
       const fieldBalance = await page.$('#balance');
-      await fieldBalance.click({ clickCount: 3 })
+      await fieldBalance.click({ clickCount: 3 });
       await fieldBalance.type(balance);
 
       // click submit
